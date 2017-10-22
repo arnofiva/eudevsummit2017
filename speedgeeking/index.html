@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>3D with esrijs - EUDevSummit2017 SpeedGeeking</title>
 
@@ -36,24 +38,27 @@
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        progress: true,
-        history: true,
-        center: true,
-        controls: false,
-        width: 1366,
-        height: 768,
-        transition: 'fade',
-        dependencies: [
-          { src: 'reveal.js/plugin/markdown/marked.js' },
-          { src: 'reveal.js/plugin/markdown/markdown.js' },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
-        ]
-      });
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      hideAddressBar: true,
+      progress: true,
+      history: true,
+      center: true,
+      controls: false,
+      width: 1366,
+      height: 768,
+      transition: 'fade',
+      viewDistance: 3,
+      dependencies: [
+        { src: 'reveal.js/plugin/markdown/marked.js' },
+        { src: 'reveal.js/plugin/markdown/markdown.js' },
+        { src: 'reveal.js/plugin/notes/notes.js', async: true },
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+
   </script>
 </body>
 
