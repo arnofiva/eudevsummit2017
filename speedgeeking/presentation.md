@@ -291,7 +291,7 @@ view.then(() => {
 
 ---
 
-<!-- .slide: data-background="img/bg-main.png" -->
+<!-- .slide: data-background="img/bg-main-qr.png" -->
 
 ##  Thanks for listening!
 
