@@ -1,4 +1,4 @@
-<!-- .slide: data-background="img/bg-main.png" -->
+<!-- .slide: data-background="img/bg-main-qr.png" -->
 
 ## 3D with [#esrijs](https://developers.arcgis.com/javascript/)
 ###  EU DevSummit 2017 - Speedgeeking
@@ -10,6 +10,7 @@ Javier Gutierrez | [javier_gutierrez@esri.com](mailto:javier_gutierrez@esri.com)
 <br>
 ESRI R&amp;D Center Zürich
 </small>
+
 
 ---
 
@@ -33,18 +34,26 @@ ESRI R&amp;D Center Zürich
 <img src="./img/hike3.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none; display:inline-block" />
 <img src="./img/hike2.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none;display:inline-block" />
 
+
+<br>
+<small>
+<small>
+Photos courtesy of [SAC Silvretta Hütte](https://www.silvrettahuette.ch)
+</small>
+</small>
+
 ---
 
-<img src="./img/hike1.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none; display:inline-block" />
-<img src="./img/hike4.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none;display:inline-block" />
-
-
----
+### SAC Silvretta Hütte https://www.silvrettahuette.ch
 
 <img src="./img/hut1.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none; display:inline-block" />
 <img src="./img/hut2.jpg" style="max-height: 600px; border:0; background: none; box-shadow: none;display:inline-block" />
 
-https://www.silvrettahuette.ch
+<small>
+<small>
+Photos courtesy of [SAC Silvretta Hütte](https://www.silvrettahuette.ch)
+</small>
+</small>
 
 ---
 
@@ -146,8 +155,7 @@ view.ui.add(legend);
 <div class="twos">
   <div class="snippet">
     <pre>
-      <code class="lang-js hljs javascript">
-var map = new WebScene({
+      <code class="lang-js hljs javascript">var map = new WebScene({
   portalItem:{
     id: "5682cd69fe5c451d8924d38d6cc918d4"
   }
@@ -211,7 +219,7 @@ view.then(() => {
 ---
 
 
-### More 3D: Callouts for Points
+### More 3D: Points elevation info
 
 
 <div class="twos">
@@ -219,9 +227,50 @@ view.then(() => {
     <pre>
       <code class="lang-js hljs javascript">
 view.then(() => {
-map.layers.get
+
+  var lyr = map.layers.find(l=> l.title == "POI");
+
+  lyr.elevationInfo = {
+    mode: "relative-to-scene"
+  };
+
 });
       </code>
+   </pre>
+  </div>
+
+  <div class="snippet-preview">
+    <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-elevationInfo.html"></iframe>
+  </div>
+</div>
+
+---
+
+
+### More 3D: Callouts for Points
+
+
+<div class="twos">
+  <div class="snippet">
+    <pre>
+      <code class="lang-js hljs javascript">symbol: {
+  type: "point-3d",
+  symbolLayers: [{
+    type: "icon",
+    size: 11.25,
+    resource: { primitive: "circle" },
+    material: { color: [237, 81, 81] }
+  }],
+  verticalOffset: {
+    screenLength: 30,
+    maxWorldLength: 300
+  },
+  callout: {
+    type: "line",
+    size: 0.6,
+    color: [25, 25, 25]
+  }
+}</code>
    </pre>
   </div>
 
@@ -230,3 +279,26 @@ map.layers.get
   </div>
 </div>
 
+---
+
+
+### Want to know more about 3D with EsriJS ?
+
+| Wednesday  | Thursday  |
+| ---------- | --------- |
+| Practical Guide to Building 3D Web Apps <br><small>9:00 AM @ Room A03 - A04</small> | Indexed 3D Scene (I3S) Layers Specification <br><small>10:00 AM @ Room B09</small>|
+| Working in 3D with the ArcGIS API for JavaScript <br><small>3:00 PM @ Room B05</small> | Practical Guide to Building 3D Web Apps <br><small>11:00 AM @ Room B09 </small>|
+
+---
+
+<!-- .slide: data-background="img/bg-main.png" -->
+
+##  Thanks for listening!
+
+### 3D with [#esrijs](https://developers.arcgis.com/javascript/)
+<br>
+<small>
+Javier Gutierrez | [javier_gutierrez@esri.com](mailto:javier_gutierrez@esri.com) | [@jgutierrez0](https://twitter.com/jgutierrez0)
+<br>
+ESRI R&amp;D Center Zürich
+</small>
