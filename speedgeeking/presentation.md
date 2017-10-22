@@ -61,7 +61,7 @@ var map = new WebMap({
   }
 });
 
-view = new MapView({
+var view = new MapView({
   map: map,
   container: "viewDiv"
 });
@@ -76,7 +76,7 @@ view = new MapView({
 
 ---
 
-### Hike to Silvretta hut, in the Swiss Alps, with a Legend :)
+### Hike to Silvretta hut, in the Swiss Alps, with a Legend!
 
 
 <div class="twos">
@@ -89,7 +89,7 @@ var map = new WebMap({
   }
 });
 
-view = new MapView({
+var view = new MapView({
   map: map,
   container: "viewDiv"
 });
@@ -108,58 +108,125 @@ view.ui.add(legend);
 
 ---
 
+### Hike to Silvretta hut, in the Swiss Alps, with a Legend, in 3D! :)
 
----
 
-<!-- .slide: data-background="images/Picture2.png" -->
-
-## More API: Presentation
-
-- slide contains: viewpoint, layer visibility, basemap, environment + metadata
-
-```
-webscene.presentation = {
-  slides : []
-}
-
-// capture current scene state
-var slide = Slide.createFrom(view);
-
-// re-apply the stored state
-slide.applyTo(view);
-
-```
-
----
-
-<!-- .slide: data-background="images/Picture2.png" -->
-
-## More API: Clipping
-
-- clipping is only supported for local scenes
-```
-scene = new WebScene({
-    viewingMode: 'local',
-    clippingArea: {
-      xmin: 344556.17949990794,
-      ymin: 3786680.957522931,
-      xmax: 368905.9689491527,
-      ymax: 3801033.594521225,
-      spatialReference: { wkid: 26711 }
-    },
-    clippingEnabled: true
+<div class="twos">
+  <div class="snippet">
+    <pre>
+      <code class="lang-js hljs javascript">
+var map = new WebScene({
+  portalItem:{
+    id: "5682cd69fe5c451d8924d38d6cc918d4"
+  }
 });
-```
+
+var view = new SceneView({
+  map: map,
+  container: "viewDiv"
+});
+
+var legend = new Legend({ view: view });
+view.ui.add(legend);
+      </code>
+   </pre>
+  </div>
+
+  <div class="snippet-preview">
+    <iframe id="frame-auto-cast" data-src="./snippets/hike-scene.html"></iframe>
+  </div>
+</div>
+
+
 ---
 
-<!-- .slide: data-background="images/Picture2.png" -->
-## More API: External Rendering
-<table  class="reveal">
-    <tr>
-      <td><img src="./images/external renderer1.png" style="max-height: 500px"/></td>
-      <td><a href="http://developers.arcgis.com/javascript/latest/sample-code/scene-external-renderer/live/index.html"><img src="./images/external renderer2.png" style="max-height: 500px"/></a></td>
-    </tr>
-  </table>
+### Hike to Silvretta hut, in the Swiss Alps, with a Legend, in 3D, <br> with Elevation! \o/
 
 
+<div class="twos">
+  <div class="snippet">
+    <pre>
+      <code class="lang-js hljs javascript">
+var map = new WebScene({
+  portalItem:{
+    id: "5682cd69fe5c451d8924d38d6cc918d4"
+  }
+});
+
+var view = new SceneView({
+  map: map,
+  container: "viewDiv"
+});
+
+var legend = new Legend({ view: view });
+view.ui.add(legend);
+
+view.then(() => {
+  map.ground = "world-elevation";
+});
+      </code>
+   </pre>
+  </div>
+
+  <div class="snippet-preview">
+    <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-elevation.html"></iframe>
+  </div>
+</div>
+
+---
+
+### More 3D: Set Camera
+
+
+<div class="twos">
+  <div class="snippet">
+    <pre>
+      <code class="lang-js hljs javascript">
+view.then(() => {
+  map.ground = "world-elevation";
+
+  // use goTo for moving camera
+  view.goTo({
+
+    // console: JSON.stringify(view.camera.toJSON())
+    tilt: 60,
+    heading: 78,
+    position: {
+      x: 1108833,
+      y: 5917218,
+      z: 5432,
+      spatialReference: { wkid: 3857 }
+    }
+  });
+});
+      </code>
+   </pre>
+  </div>
+
+  <div class="snippet-preview">
+    <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-camera.html"></iframe>
+  </div>
+</div>
+
+---
+
+
+### More 3D: Callouts for Points
+
+
+<div class="twos">
+  <div class="snippet">
+    <pre>
+      <code class="lang-js hljs javascript">
+view.then(() => {
+map.layers.get
+});
+      </code>
+   </pre>
+  </div>
+
+  <div class="snippet-preview">
+    <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-callouts.html"></iframe>
+  </div>
+</div>
 
