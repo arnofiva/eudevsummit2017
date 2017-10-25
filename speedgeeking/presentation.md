@@ -1,7 +1,9 @@
-<!-- .slide: data-background="img/bg-main-qr.png" -->
+<!-- .slide: data-background="img/bg-main.png" -->
 
 ## 3D with [#esrijs](https://developers.arcgis.com/javascript/)
 ###  EU DevSummit 2017 - Speedgeeking
+
+
 
 <br>
 
@@ -11,6 +13,14 @@ Javier Gutierrez | [javier_gutierrez@esri.com](mailto:javier_gutierrez@esri.com)
 ESRI R&amp;D Center Zürich
 </small>
 
+
+<div>
+ <p>
+   <small><small>
+    <a target="_blank" href="https://github.com/gutierrezj/eudevsummit2017/tree/master/speedgeeking">see source code for this presentation</a>
+   </small></small>
+ </p>
+</div>
 
 ---
 
@@ -83,6 +93,15 @@ var view = new MapView({
   </div>
 </div>
 
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-map.html">full screen</a>
+   </small></small>
+ </p>
+</div>
+
+
 ---
 
 ### Hike to Silvretta hut, in the Swiss Alps, with a Legend!
@@ -114,6 +133,13 @@ view.ui.add(legend);
   </div>
 </div>
 
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-map-legend.html">full screen</a>
+   </small></small>
+ </p>
+</div>
 
 ---
 
@@ -146,6 +172,13 @@ view.ui.add(legend);
   </div>
 </div>
 
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-scene.html">full screen</a>
+   </small></small>
+ </p>
+</div>
 
 ---
 
@@ -179,6 +212,14 @@ view.then(() => {
   <div class="snippet-preview">
     <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-elevation.html"></iframe>
   </div>
+</div>
+
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-scene-elevation.html">full screen</a>
+   </small></small>
+ </p>
 </div>
 
 ---
@@ -216,6 +257,14 @@ view.then(() => {
   </div>
 </div>
 
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-scene-camera.html">full screen</a>
+   </small></small>
+ </p>
+</div>
+
 ---
 
 
@@ -242,6 +291,14 @@ view.then(() => {
   <div class="snippet-preview">
     <iframe id="frame-auto-cast" data-src="./snippets/hike-scene-elevationInfo.html"></iframe>
   </div>
+</div>
+
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-scene-elevationInfo.html">full screen</a>
+   </small></small>
+ </p>
 </div>
 
 ---
@@ -279,6 +336,14 @@ view.then(() => {
   </div>
 </div>
 
+<div>
+ <p>
+   <small><small>
+    <a href="./snippets/hike-scene-callouts.html">full screen</a>
+   </small></small>
+ </p>
+</div>
+
 ---
 
 
@@ -291,7 +356,7 @@ view.then(() => {
 
 ---
 
-<!-- .slide: data-background="img/bg-main-qr.png" -->
+<!-- .slide: data-background="img/bg-main.png" -->
 
 ##  Thanks for listening!
 
@@ -302,3 +367,11 @@ Javier Gutierrez | [javier_gutierrez@esri.com](mailto:javier_gutierrez@esri.com)
 <br>
 ESRI R&amp;D Center Zürich
 </small>
+
+<div>
+ <p>
+   <small><small>
+    <a target="_blank" href="https://github.com/gutierrezj/eudevsummit2017/tree/master/speedgeeking">see source code for this presentation</a>
+   </small></small>
+ </p>
+</div>
